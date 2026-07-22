@@ -96,3 +96,6 @@ Screenshot each screen with `?export=dashboard` (etc.) while `npm run dev` is ru
 ## Stack
 
 React 19 · TypeScript · Vite · Lucide React · Recharts
+
+
+12345
