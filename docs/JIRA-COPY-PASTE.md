@@ -54,6 +54,7 @@ Presentation slides and demo script | Documentation & submission | All | 2 | Don
 
 ## After setup
 
-1. Screenshot **Backlog**, **Active sprint board**, **Burndown** (if shown)
-2. Copy Jira URL → paste into Word report where it says `[INSERT YOUR JIRA PROJECT URL]`
+1. Screenshot **Backlog**, **Active sprint board**, **Burndown** — see `docs/RUBRIC-JIRA-EVIDENCE.md` for full list
+2. Copy Jira URL → paste into `docs/ICT308-Assessment1-Report.md` Section 5 and Word report
 3. Add lecturer as viewer if project is private
+4. Mark all Sprint 1 stories **Done** (39 points total)

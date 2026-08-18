@@ -29,9 +29,15 @@ npm run preview
 
 | Document | Path |
 |----------|------|
+| **Marking rubric checklist (start here)** | `docs/MARKING-RUBRIC-CHECKLIST.md` |
 | Technical report (~2000 words) | `docs/ICT308-Assessment1-Report.md` |
 | Presentation outline | `docs/ICT308-Presentation-Outline.md` |
+| Demo script (10 min + Q&A) | `docs/RUBRIC-DEMO-SCRIPT.md` |
 | Submission checklist | `docs/SUBMISSION-CHECKLIST.md` |
+| GitHub rubric evidence | `docs/RUBRIC-GITHUB-EVIDENCE.md` |
+| Jira rubric evidence | `docs/RUBRIC-JIRA-EVIDENCE.md` |
+| Team contributions | `docs/TEAM-CONTRIBUTIONS.md` |
+| Contributing guide | `CONTRIBUTING.md` |
 | Jira setup (15 min) | `docs/JIRA-SETUP-GUIDE.md` |
 | Jira backlog | `docs/jira-backlog.md` |
 | Screenshot guide | `docs/FIGMA-GUIDE.md` |

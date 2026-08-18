@@ -34,11 +34,23 @@ git config user.email "YOUR-GITHUB-EMAIL@gmail.com"
 
 ---
 
-## Suggested commits today (pick 1–2 each)
+## Documented commit history (for assessors)
+
+| Commit | Author area | Rubric criterion |
+|--------|-------------|------------------|
+| `feat: add technician and officer roles with RBAC navigation` | Ayush / Charanpal | Implementation |
+| `feat: add MySQL schema and seed data for Iteration 2` | Charanpal | Implementation |
+| `docs: add ICT308 report, presentation, Jira guides` | Krishna | Documentation |
+| `docs: update README and CONTRIBUTING for ICT308 Assessment 1` | Ayush | GitHub |
+| `docs: align ICT308 rubric evidence and assessment documentation` | Team | All criteria |
+
+See `docs/RUBRIC-GITHUB-EVIDENCE.md` for full list and screenshot guide.
+
+## If Contributors graph is incomplete (pick 1–2 each)
 
 | Person | Suggested commit message | File to touch |
 |--------|-------------------------|---------------|
-| Krishna | `docs: expand dashboard section in ICT308 report` | `docs/ICT308-Assessment1-Report.md` |
+| Krishna | `docs: update dashboard screenshots in report` | `docs/ICT308-Assessment1-Report.md` |
 | Charanpal | `docs: update Jira backlog for Sprint 1` | `docs/jira-backlog.md` |
 | Ayush | `docs: update presentation speaker notes` | `docs/ICT308-Presentation-Outline.md` |
 

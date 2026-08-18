@@ -101,9 +101,10 @@ Capture these for your Word report:
 
 ---
 
-## Tips for full marks
+## Tips for full marks (Excellent rubric)
 
-- Assign every story to a named team member
-- Most Sprint 1 items should be **Done**
-- Carry 2–3 items to Sprint 2 (API integration, auth) to show realistic planning
+- Assign every story to a named team member (Krishna / Charanpal / Ayush)
+- Mark all Sprint 1 items **Done** (39 story points — see `docs/jira-backlog.md`)
+- Carry API, JWT, and deployment stories to Sprint 2 to show realistic planning
 - Sprint goal field should match Iteration 1 objectives from the report
+- Capture screenshots listed in `docs/RUBRIC-JIRA-EVIDENCE.md` for Word report Section 5

@@ -76,13 +76,15 @@
 
 ## Full marks rubric self-check
 
-| Criterion (marks) | Excellent checklist |
-|-------------------|---------------------|
-| **Implementation (10)** | All roles work, maintenance filters, public report flow, database schema |
-| **Documentation (5)** | 2000-word report with architecture, challenges, screenshots |
-| **GitHub (5)** | Regular commits, README, team can explain history |
-| **Jira (5)** | Sprint 1 planned, tasks assigned, most marked Done |
-| **Demo (5)** | Each member explains their module + technical decisions |
+**Master checklist:** `docs/MARKING-RUBRIC-CHECKLIST.md` — maps every criterion to evidence files.
+
+| Criterion (marks) | Evidence doc | Excellent checklist |
+|-------------------|--------------|---------------------|
+| **Implementation (10)** | `README.md`, `src/`, `database/` | All 5 roles, all screens, `npm run build` passes |
+| **Documentation (5)** | `docs/ICT308-Assessment1-Report.md` | ~2000 words, 6 sections, architecture justification, screenshots |
+| **GitHub (5)** | `docs/RUBRIC-GITHUB-EVIDENCE.md` | Regular commits, README, CONTRIBUTING, contributors graph |
+| **Jira (5)** | `docs/RUBRIC-JIRA-EVIDENCE.md` | Sprint 1 planned, assignees, story points, board screenshots |
+| **Demo (5)** | `docs/RUBRIC-DEMO-SCRIPT.md` | 10-min script, technical decisions, remaining work, future plans |
 
 ---
 

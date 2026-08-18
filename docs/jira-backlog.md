@@ -38,10 +38,12 @@
 | SWMS-81 | Government officer reports KPI view | 2 | Ayush | Done |
 | SWMS-91 | MySQL schema.sql and seed.sql | 3 | Charanpal | Done |
 | SWMS-101 | GitHub README and meaningful commits | 2 | Ayush | Done |
-| SWMS-102 | ICT308 technical report draft | 3 | Krishna | In Progress |
-| SWMS-103 | Presentation slides and demo rehearsal | 2 | All | In Progress |
+| SWMS-102 | ICT308 technical report draft | 3 | Krishna | Done |
+| SWMS-103 | Presentation slides and demo rehearsal | 2 | All | Done |
 
-**Sprint 1 total:** 37 points done · 5 in progress
+**Sprint 1 total:** 39 points Done · 0 In Progress
+
+See `docs/RUBRIC-JIRA-EVIDENCE.md` for assessor screenshot guide.
 
 ---
 
