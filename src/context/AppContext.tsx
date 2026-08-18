@@ -31,6 +31,8 @@ function resolveInitialRole(): UserRole {
   const exportMode = getExportMode();
 
   if (exportMode === 'driver') return 'driver';
+  if (exportMode === 'technician') return 'technician';
+  if (exportMode === 'officer') return 'officer';
   if (
     exportMode === 'login' ||
     exportMode === 'public' ||
@@ -75,7 +77,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const login = useCallback((r: UserRole, name?: string) => {
     if (!r) return;
     setRole(r);
-    const display = name ?? (r === 'manager' ? 'TCCS Manager' : 'Driver');
+    const defaults: Record<Exclude<UserRole, null>, string> = {
+      manager: 'TCCS Manager',
+      driver: 'Route Driver',
+      technician: 'Jordan Taylor',
+      officer: 'Gov Officer',
+    };
+    const display = name ?? defaults[r];
     setUserName(display);
     sessionStorage.setItem('swm-role', r);
     sessionStorage.setItem('swm-name', display);

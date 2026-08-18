@@ -20,12 +20,14 @@ import { ReportsView } from './views/ReportsView';
 import './views/ReportsView.css';
 import { RoutesView } from './views/RoutesView';
 import './views/RoutesView.css';
+import { defaultNavForRole } from './lib/roleConfig';
 import {
   clearExportParam,
   getExportMode,
   isExportCaptureMode,
   readSavedRole,
 } from './lib/routing';
+import type { UserRole } from './types';
 
 type AppScreen = 'login' | 'public' | 'app';
 
@@ -41,6 +43,12 @@ function initialRoute(): { screen: AppScreen; nav: NavId } {
   if (mode === 'driver') {
     return { screen: 'app', nav: 'driver' };
   }
+  if (mode === 'technician') {
+    return { screen: 'app', nav: 'maintenance' };
+  }
+  if (mode === 'officer') {
+    return { screen: 'app', nav: 'reports' };
+  }
   if (mode) {
     const navMap: Record<string, NavId> = {
       dashboard: 'dashboard',
@@ -54,11 +62,10 @@ function initialRoute(): { screen: AppScreen; nav: NavId } {
   }
 
   const saved = readSavedRole();
-  if (saved === 'driver') {
-    return { screen: 'app', nav: 'driver' };
+  if (saved) {
+    return { screen: 'app', nav: defaultNavForRole(saved) };
   }
 
-  // Default: manager desktop dashboard (also used on first visit with demo manager session).
   return { screen: 'app', nav: 'dashboard' };
 }
 
@@ -82,14 +89,9 @@ function AppRoutes() {
     setRoute({ screen: 'login', nav: 'dashboard' });
   };
 
-  const handleManagerLogin = () => {
+  const handleStaffLogin = (r: Exclude<UserRole, null>) => {
     clearExportParam();
-    setRoute({ screen: 'app', nav: 'dashboard' });
-  };
-
-  const handleDriverLogin = () => {
-    clearExportParam();
-    setRoute({ screen: 'app', nav: 'driver' });
+    setRoute({ screen: 'app', nav: defaultNavForRole(r) });
   };
 
   if (!role) {
@@ -105,8 +107,7 @@ function AppRoutes() {
     return (
       <LoginView
         onPublicReport={() => setScreen('public')}
-        onManagerLogin={handleManagerLogin}
-        onDriverLogin={handleDriverLogin}
+        onStaffLogin={handleStaffLogin}
       />
     );
   }

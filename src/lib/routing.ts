@@ -15,7 +15,10 @@ export function clearExportParam(): void {
   window.history.replaceState({}, '', next);
 }
 
-export function readSavedRole(): 'manager' | 'driver' | null {
+const VALID_ROLES = ['manager', 'driver', 'technician', 'officer'] as const;
+export type SavedRole = (typeof VALID_ROLES)[number];
+
+export function readSavedRole(): SavedRole | null {
   const saved = sessionStorage.getItem('swm-role');
-  return saved === 'manager' || saved === 'driver' ? saved : null;
+  return VALID_ROLES.includes(saved as SavedRole) ? (saved as SavedRole) : null;
 }

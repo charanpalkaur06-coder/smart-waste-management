@@ -9,6 +9,7 @@ import {
   Users,
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
+import { ROLE_NAV } from '../lib/roleConfig';
 
 export type NavId =
   | 'dashboard'
@@ -38,7 +39,10 @@ const navItems: { id: NavId; label: string; icon: typeof LayoutDashboard }[] = [
 ];
 
 export function Sidebar({ active, onNavigate, onPublicReport, mobileOpen, onClose }: SidebarProps) {
-  const { newReportCount } = useApp();
+  const { newReportCount, role } = useApp();
+
+  const allowedNav = role ? ROLE_NAV[role] : [];
+  const visibleItems = navItems.filter((item) => allowedNav.includes(item.id));
 
   const handleNav = (id: NavId) => {
     onNavigate(id);
@@ -64,7 +68,7 @@ export function Sidebar({ active, onNavigate, onPublicReport, mobileOpen, onClos
       </div>
 
       <nav className="sidebar-nav">
-        {navItems.map(({ id, label, icon: Icon }) => (
+        {visibleItems.map(({ id, label, icon: Icon }) => (
           <button
             key={id}
             type="button"
@@ -80,7 +84,7 @@ export function Sidebar({ active, onNavigate, onPublicReport, mobileOpen, onClos
         ))}
       </nav>
 
-      {onPublicReport && (
+      {onPublicReport && role === 'manager' && (
         <button type="button" className="sidebar-public-cta" onClick={onPublicReport}>
           Report a bin (public)
         </button>

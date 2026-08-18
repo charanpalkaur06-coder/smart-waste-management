@@ -1,4 +1,4 @@
-export type UserRole = 'manager' | 'driver' | null;
+export type UserRole = 'manager' | 'driver' | 'technician' | 'officer' | null;
 
 export type ReportIssue = 'full_bin' | 'overflow' | 'damaged' | 'missed_collection' | 'other';
 

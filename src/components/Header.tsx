@@ -1,5 +1,6 @@
 import { Bell, LogOut, Menu, Search, User } from 'lucide-react';
 import { useApp } from '../context/AppContext';
+import { ROLE_LABELS } from '../lib/roleConfig';
 import { stats } from '../data/mockData';
 
 interface HeaderProps {
@@ -54,7 +55,7 @@ export function Header({ onLogout, onMenuToggle }: HeaderProps) {
           <div className="header-user-info">
             <span className="header-user-name">{userName}</span>
             <span className="header-user-role">
-              {role === 'manager' ? 'TCCS Operations' : 'Collection Driver'}
+              {role ? ROLE_LABELS[role] : 'Guest'}
             </span>
           </div>
         </div>

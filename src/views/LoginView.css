@@ -106,6 +106,18 @@
   gap: 0.75rem;
 }
 
+.login-actions--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+@media (max-width: 480px) {
+  .login-actions--grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .login-btn {
   display: flex;
   align-items: center;

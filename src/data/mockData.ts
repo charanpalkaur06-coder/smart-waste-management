@@ -54,10 +54,24 @@ export const routeStops = [
   { order: 4, binId: 'WOD-007', fill: 71, location: 'Woden' },
 ];
 
-export const maintenanceIssues = [
-  { id: 'M-01', type: 'LOW_BATTERY', target: 'TUG-009', detail: 'Sensor battery at 12%' },
-  { id: 'M-02', type: 'OFFLINE', target: 'GUN-015', detail: 'No heartbeat for 2 hours' },
-  { id: 'M-03', type: 'SENSOR_FAULT', target: 'WDN-104', detail: '1 sensor → multiple tickets' },
+export type MaintenanceStatus = 'open' | 'in-progress' | 'resolved';
+export type MaintenancePriority = 'low' | 'medium' | 'high';
+
+export interface MaintenanceTicket {
+  id: string;
+  type: string;
+  target: string;
+  detail: string;
+  status: MaintenanceStatus;
+  priority: MaintenancePriority;
+}
+
+export const maintenanceIssues: MaintenanceTicket[] = [
+  { id: 'M-01', type: 'LOW_BATTERY', target: 'TUG-009', detail: 'Sensor battery at 12%', status: 'open', priority: 'high' },
+  { id: 'M-02', type: 'OFFLINE', target: 'GUN-015', detail: 'No heartbeat for 2 hours', status: 'open', priority: 'high' },
+  { id: 'M-03', type: 'SENSOR_FAULT', target: 'WDN-104', detail: 'Intermittent fill readings', status: 'in-progress', priority: 'medium' },
+  { id: 'M-04', type: 'LID_DAMAGE', target: 'CIV-016', detail: 'Hinge replacement scheduled', status: 'in-progress', priority: 'low' },
+  { id: 'M-05', type: 'COMPACTION', target: 'BEL-022', detail: 'Motor fault resolved on site', status: 'resolved', priority: 'high' },
 ];
 
 export const chartData = [

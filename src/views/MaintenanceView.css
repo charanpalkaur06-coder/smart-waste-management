@@ -49,3 +49,41 @@
   font-size: 0.8125rem;
   color: var(--gray-600);
 }
+
+.maintenance-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.maintenance-filter {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--gray-200);
+  background: var(--surface, #fff);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  cursor: pointer;
+}
+
+.maintenance-filter.active {
+  background: var(--green-800);
+  border-color: var(--green-800);
+  color: #fff;
+}
+
+.maintenance-meta {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--gray-500);
+}
+
+.maintenance-empty {
+  padding: 1.5rem;
+  color: var(--gray-600);
+}
