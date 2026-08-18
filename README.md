@@ -1,16 +1,22 @@
-# Smart Waste Management
+# Smart Waste Management — Canberra
 
-Professional operations dashboard for the **Canberra Smart Waste Management** TCCS pilot — redesigned from the original Figma wireframes, with a working **public bin reporting** flow.
+Professional operations dashboard for the **Canberra Smart Waste Management** TCCS pilot — ICT307 design · **ICT308 Iteration 1 implementation**.
 
-## Quick start
+**GitHub:** https://github.com/charanpalkaur06-coder/smart-waste-management  
+**Team:** Krishna Trivedi, Charanpal Kaur, Ayush Ale  
+**Client:** ACT Government / Transport Canberra and City Services (TCCS)
 
-```bash
-cd ~/Projects/smart-waste-management
+---
+
+## ICT308 Assessment 1 — Quick start
+
+```powershell
+cd "C:\Users\keini\OneDrive\Documents\GitHub\smart-waste-management"
 npm install
 npm run dev
 ```
 
-Open the URL shown in the terminal (usually **http://localhost:5173**).
+Open **http://localhost:5173** in Chrome.
 
 Production build:
 
@@ -19,83 +25,95 @@ npm run build
 npm run preview
 ```
 
----
+### Submission docs
 
-## User guide — testing each role
-
-### 1. Manager (default)
-
-Opening **http://localhost:5173** loads the **desktop Manager dashboard** (sidebar, stats, map, charts).
-
-1. Use the full dashboard: map, bins, routes, maintenance, reports.
-2. **Public Reports** in the sidebar shows citizen submissions with a red badge for new items.
-3. On the dashboard, a banner and stat card appear when new public reports exist.
-4. Open a report → **Assign** or **Resolve** to update status.
-5. **Sign out** via the header logout icon to reach the role picker.
-
-For the login screen only, use **http://localhost:5173/?export=login**.
-
-### 2. Driver
-
-1. Sign out, then click **Sign in — Driver** on the login screen.
-2. Simplified view: current route stop, **Mark Collected**, logout.
-3. Link at bottom to submit a public report if needed.
-
-### 3. Public (no login)
-
-1. Sign out, then click **Report a full bin** (or use the sidebar link when signed in as manager).
-2. Choose issue type (full bin, overflow, damaged, etc.).
-3. Enter location and suburb, optionally bin ID and description.
-4. Tap **Use my location** to auto-fill coordinates (browser permission required).
-5. Submit — you receive a **reference ID** (e.g. `PR-XXXX`).
-
-Reports are stored in your browser’s **localStorage** (demo). In production you would connect a real API/database.
-
-Figma screenshot URLs use `?export=public` (mobile) or `?export=dashboard` (desktop) — remove the query string for normal use.
+| Document | Path |
+|----------|------|
+| Technical report (~2000 words) | `docs/ICT308-Assessment1-Report.md` |
+| Presentation outline | `docs/ICT308-Presentation-Outline.md` |
+| Submission checklist | `docs/SUBMISSION-CHECKLIST.md` |
+| Jira setup (15 min) | `docs/JIRA-SETUP-GUIDE.md` |
+| Jira backlog | `docs/jira-backlog.md` |
+| Screenshot guide | `docs/FIGMA-GUIDE.md` |
+| Database schema | `database/schema.sql` |
 
 ---
 
-## How public reporting works (technical)
+## User roles — testing guide
 
-| Piece | Location |
-|-------|----------|
-| Form UI | `src/views/PublicReportView.tsx` |
-| Storage | `src/lib/reportStore.ts` → `localStorage` key `smart-waste-public-reports` |
-| State | `src/context/AppContext.tsx` |
-| Manager review | `src/views/PublicReportsAdminView.tsx` |
+| Role | How to access | Screens |
+|------|---------------|---------|
+| **Operations Manager** | Sign in — Manager (or default on first load) | Full dashboard, map, routes, maintenance, public reports admin, reports |
+| **Collection Driver** | Sign in — Driver | Large-button field collection UI |
+| **Maintenance Technician** | Sign in — Maintenance Technician | Maintenance tickets + bin map |
+| **Government Officer** | Sign in — Government Officer | Dashboard overview + Reports & KPIs |
+| **Resident / Business** | Report a full bin (no login) | Minimal public report form |
 
-**Demo limitation:** Data is per-browser only. Clearing site data removes reports. For a real deployment you would:
+Sign out via the header logout icon to return to the role picker.
 
-- POST reports to a REST API
-- Notify managers via email/push
-- Optionally attach photos to object storage
-- Geocode addresses server-side
-
----
-
-## Applying this design back to Figma
-
-Cursor cannot create or edit files on figma.com. Use the **Figma recreation package**:
-
-- **[`figma-export/FIGMA-NEW-PROJECT.md`](figma-export/FIGMA-NEW-PROJECT.md)** — step-by-step new Figma file
-- **[`figma-design-kit/`](figma-design-kit/)** — tokens, screen inventory, component specs
-- **[`figma-export/design-tokens.json`](figma-export/design-tokens.json)** — colors, type, spacing for plugins
-
-Screenshot each screen with `?export=dashboard` (etc.) while `npm run dev` is running — see the guide for all URLs. Name the file **Smart Waste Management** (not “Wasre”).
+Screenshot URLs: see `docs/FIGMA-GUIDE.md` (`?export=login`, `?export=dashboard`, etc.)
 
 ---
 
 ## Features
 
-- Branded login (Manager / Driver / Public report)
-- Manager dashboard with stats, map, alerts, charts
-- Public bin reporting with geolocation
-- Public Reports admin (filter, assign, resolve)
-- Route planning, driver view, maintenance, KPI reports
+- Five-role login (Manager, Driver, Technician, Officer, Public)
+- Manager dashboard with stats, map, alerts, Recharts charts
+- Bin status colour coding: green normal · amber warning · red critical · grey offline
+- Route planning and driver field collection UI
+- Maintenance tickets with filters (Open / In progress / Resolved / High priority)
+- Public bin reporting with geolocation and localStorage persistence
+- Manager public reports inbox (assign / resolve)
+- MySQL database schema and seed data for Iteration 2
+
+---
+
+## Project structure
+
+```
+smart-waste-management/
+├── src/
+│   ├── views/          # Login, Dashboard, Driver, Maintenance, Reports…
+│   ├── components/     # Sidebar, Header, BinTable, Charts…
+│   ├── context/        # AppContext (role, reports)
+│   ├── lib/            # roleConfig, reportStore, routing
+│   └── data/           # mockData.ts
+├── database/
+│   ├── schema.sql
+│   └── seed.sql
+├── docs/               # ICT308 submission package
+├── figma-design-kit/
+└── figma-export/
+```
+
+---
 
 ## Stack
 
 React 19 · TypeScript · Vite · Lucide React · Recharts
 
+---
 
-12345
+## Push to GitHub
+
+```powershell
+git add .
+git commit -m "your message"
+git push origin main
+```
+
+Do **not** force push to `main`.
+
+---
+
+## AI use acknowledgement
+
+Generative AI (Cursor) was used for code assistance and documentation drafting. All work was reviewed by the team per CIHE academic integrity requirements.
+
+---
+
+## Figma design reference
+
+- [Figma prototype](https://www.figma.com/design/NudMsbIEggM4iDsLsrb3dl/Smart-Wasre-Management)
+- Recreation guide: `figma-export/FIGMA-NEW-PROJECT.md`
+- Design tokens: `figma-export/design-tokens.json`
