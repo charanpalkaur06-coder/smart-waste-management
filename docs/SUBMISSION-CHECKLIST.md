@@ -23,7 +23,6 @@
 - [ ] Replace `[INSERT YOUR JIRA URL]`
 - [ ] Add screenshots: Login, Dashboard, Map, Routes, Driver, Maintenance, Public Report, Admin inbox, Reports
 - [ ] Add screenshots: GitHub commit history, Jira sprint board
-- [ ] Include AI acknowledgement section (already in draft)
 - [ ] Verify ~2000 word count
 - [ ] APA references section complete
 

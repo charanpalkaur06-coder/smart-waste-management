@@ -1,6 +1,6 @@
 # Create a new Figma project — Smart Waste Management
 
-**Honest note:** Cursor cannot create or edit files on [figma.com](https://figma.com). There is no Figma MCP in this workspace. This guide plus [`../figma-design-kit/`](../figma-design-kit/) is your **blueprint** — you create the Figma file yourself.
+**Note:** Figma files are created and edited at [figma.com](https://figma.com). This guide plus [`../figma-design-kit/`](../figma-design-kit/) is your **blueprint** — you create the Figma file yourself.
 
 **Branding:** Name the file **Smart Waste Management** (fix legacy typos like “Smart Wasre”).
 
@@ -212,7 +212,7 @@ If you have the legacy file (“Smart Wasre Management”):
 
 ## Using the Figma API (with your token)
 
-The REST API **cannot create a new file** — you still need **File → New design file** once (or enable **Figma MCP** in Cursor for `create_new_file`).
+The REST API **cannot create a new file** — you still need **File → New design file** once in the Figma app.
 
 After you have a file, paste your credentials and we can push **color variables** automatically:
 

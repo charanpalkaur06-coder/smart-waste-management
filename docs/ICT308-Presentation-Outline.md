@@ -109,7 +109,6 @@ API integration · JWT auth · deployment · testing
 | Is data real? | Demo mock data + localStorage; schema ready for MySQL |
 | How does route optimisation work? | Demo urgency ordering; Sprint 2 adds distance algorithm |
 | Security? | Role-based UI now; JWT + API guards in Sprint 2 |
-| AI use? | Cursor for assistance; all code reviewed by team; acknowledged in report |
 
 ---
 

@@ -106,12 +106,6 @@ Do **not** force push to `main`.
 
 ---
 
-## AI use acknowledgement
-
-Generative AI (Cursor) was used for code assistance and documentation drafting. All work was reviewed by the team per CIHE academic integrity requirements.
-
----
-
 ## Figma design reference
 
 - [Figma prototype](https://www.figma.com/design/NudMsbIEggM4iDsLsrb3dl/Smart-Wasre-Management)

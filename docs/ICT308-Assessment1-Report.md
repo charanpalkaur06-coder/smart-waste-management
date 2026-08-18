@@ -11,12 +11,6 @@
 
 ---
 
-## AI Use Acknowledgement
-
-Generative AI tools (Cursor) were used for brainstorming, code assistance, documentation drafting, and debugging. All design decisions were reviewed by the team. Each member can explain the implementation during the demonstration. AI-generated content was edited for accuracy per CIHE academic integrity requirements.
-
----
-
 ## 1. Project Overview
 
 ### 1.1 Brief overview
@@ -239,8 +233,6 @@ Open http://localhost:5173 — sign out to access the role picker.
 ## References
 
 ACT Government. (2026). *Transport Canberra and City Services*. https://www.transport.act.gov.au
-
-Anysphere. (2026). *Cursor IDE*. AI-assisted development with team review.
 
 React Team. (2026). *React documentation*. https://react.dev
 

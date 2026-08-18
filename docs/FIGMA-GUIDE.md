@@ -39,7 +39,7 @@ Use these URLs while `npm run dev` is running to capture consistent screenshots 
 
 **Figma file:** [Smart Waste Management](https://www.figma.com/design/NudMsbIEggM4iDsLsrb3dl/Smart-Wasre-Management)
 
-Cursor cannot edit Figma directly. To align prototype with Figma:
+Figma files must be edited in the Figma web or desktop app. To align the prototype with Figma:
 
 1. Open Figma side-by-side with the running app
 2. Compare colours using `figma-export/design-tokens.json`

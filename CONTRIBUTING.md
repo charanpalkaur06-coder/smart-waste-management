@@ -34,7 +34,3 @@ npm run build
 ```
 
 Build must pass before merging to `main`.
-
-## AI use
-
-AI tools may assist development. All commits must be reviewable and explainable by the submitting team member per CIHE policy.
