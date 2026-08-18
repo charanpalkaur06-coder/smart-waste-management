@@ -1,0 +1,17 @@
+Summary,Issue Type,Epic Name,Description,Priority,Story Points,Assignee,Status,Sprint
+Add role-based login screen,Story,Authentication,As staff I can sign in with my role so I see the correct interface,High,2,Charanpal Kaur,Done,Sprint 1
+Add five role options on login,Story,Authentication,Manager Driver Technician Officer and public resident report link,High,3,Krishna Trivedi,Done,Sprint 1
+Build manager dashboard with KPIs,Story,Dashboard,As a manager I see stats alerts map and charts for Canberra bins,High,5,Krishna Trivedi,Done,Sprint 1
+Implement bin map and table,Story,Bin Management,As staff I can view bins with colour-coded fill status filters,High,3,Krishna Trivedi,Done,Sprint 1
+Build route planning view,Story,Route Optimisation,As a manager I see ordered collection stops and route summary,Medium,3,Krishna Trivedi,Done,Sprint 1
+Build driver collection UI,Story,Driver Field UI,As a driver I use large Mark Collected buttons for field use,High,3,Ayush Ale,Done,Sprint 1
+Add maintenance ticket filters,Story,Maintenance,As a technician I filter tickets by open in-progress resolved high priority,High,3,Charanpal Kaur,Done,Sprint 1
+Build public report form,Story,Citizen Reporting,As a resident I submit a report without an account with minimal fields,High,3,Charanpal Kaur,Done,Sprint 1
+Build manager public reports inbox,Story,Citizen Reporting,As a manager I assign and resolve citizen reports,High,2,Charanpal Kaur,Done,Sprint 1
+Build government officer reports view,Story,Analytics,As an officer I preview KPI and analytics reports,Medium,2,Ayush Ale,Done,Sprint 1
+Design MySQL database schema,Story,Backend,Create normalised schema for users bins routes tickets reports,High,3,Charanpal Kaur,Done,Sprint 1
+Write ICT308 technical report,Story,Documentation,Draft 2000-word report with all six required sections,High,3,Krishna Trivedi,In Progress,Sprint 1
+Prepare presentation slides,Story,Documentation,10-minute demo script split across three team members,Medium,2,All,In Progress,Sprint 1
+Set up GitHub with meaningful commits,Story,Version Control,Regular commits and README documenting team contributions,High,2,Ayush Ale,Done,Sprint 1
+Connect frontend to REST API,Story,Backend,Replace mock data and localStorage with live API,Sprint 2,5,Ayush Ale,To Do,Sprint 2
+Implement JWT authentication,Story,Security,Secure role-based API access,Sprint 2,5,Charanpal Kaur,To Do,Sprint 2
