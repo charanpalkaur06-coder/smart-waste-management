@@ -117,3 +117,9 @@ Do **not** force push to `main`.
 - [Figma prototype](https://www.figma.com/design/NudMsbIEggM4iDsLsrb3dl/Smart-Wasre-Management)
 - Recreation guide: `figma-export/FIGMA-NEW-PROJECT.md`
 - Design tokens: `figma-export/design-tokens.json`
+## Week 7 Progress
+
+- Reviewed the Smart Waste Management project structure and existing implementation.
+- Reviewed the main system modules and project requirements for ICT308 Assessment 2.
+- Identified the key modules: Dashboard, Bin Map, Route Planning, Public Reports, Driver View, Maintenance, and Reports & KPIs.
+- Prepared the project for local setup and functional testing in the next development stage.
