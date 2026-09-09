@@ -13,7 +13,11 @@ export function RoutesView() {
         <div className="card">
           <div className="card-header">
             <h2>Route R-1042 — Collection order</h2>
-            <button type="button" className="btn btn-primary">
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => alert('Route R-1042 approved and driver assigned successfully!')}
+>
               <CheckCircle2 size={16} />
               Approve + Assign Driver
             </button>
