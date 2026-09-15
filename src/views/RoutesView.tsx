@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { CheckCircle2, Route } from 'lucide-react';
 import { routeStops } from '../data/mockData';
 
 export function RoutesView() {
+  const [isApproved, setIsApproved] = useState(false)
   return (
     <>
       <div className="page-header">
@@ -16,11 +18,12 @@ export function RoutesView() {
           <button
             type="button"
             className="btn btn-primary"
-            onClick={() => alert('Route R-1042 approved and driver assigned successfully!')}
+           onClick={() => setIsApproved(true)} 
 >
               <CheckCircle2 size={16} />
               Approve + Assign Driver
             </button>
+           {isApproved && <span>Route R-1042 ✓ Approved & Assigned</span>}
           </div>
           <div className="card-body">
             <ol className="route-list">
